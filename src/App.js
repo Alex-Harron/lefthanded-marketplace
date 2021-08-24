@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar'
 import {
@@ -12,6 +11,7 @@ function App() {
   return (
     <Router>
     <div className="App">
+      <h1>LeftHanded Marketplace</h1>
         <NavBar />
     </div>
     </Router>
