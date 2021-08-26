@@ -1,19 +1,11 @@
-function itemsReducer(state ={ items:[], requesting: false}, action) {
+function itemsReducer(state = [], action) {
     switch (action.type) {
+        case "GET_ITEMS":
+            return action.payload
 
-        case 'START_ADDING_ITEMS_REQUEST':
-        return {
-            ...state, 
-            items: [...state.items],
-            requesting: true
-        }
-        case 'ADD_ITEMS':
-            return {
-                ...state,
-                items: action.items,
-                requesting: false
-            }
-        default: 
-        return state;
+        default:
+            return state;
     }
 }
+
+export default itemsReducer;
