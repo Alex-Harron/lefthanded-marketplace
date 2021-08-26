@@ -1,5 +1,6 @@
 import './App.css';
 import NavBar from './components/NavBar'
+import Items from './components/Items';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <h1>LeftHanded Marketplace</h1>
         <NavBar />
+        <Items />
     </div>
     </Router>
   );
