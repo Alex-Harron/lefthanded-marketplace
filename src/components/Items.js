@@ -5,10 +5,6 @@ import { fetchItems } from '../actions/ItemActions.js'
 
 class Items extends Component {
 
-    // state = {
-    //     items: []
-    // }
-
     componentDidMount(){
         this.props.dispatchFetchItems()
     }
