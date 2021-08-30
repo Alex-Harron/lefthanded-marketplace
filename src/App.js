@@ -1,6 +1,8 @@
+import React, { Component } from 'react'
 import './App.css';
 import NavBar from './components/NavBar'
-import Items from './components/Items';
+import ItemsContainer from './containers/ItemsContainer';
+import CartItems from './containers/CartItems';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,16 +10,24 @@ import {
   Link
 } from "react-router-dom";
 
-function App() {
-  return (
-    <Router>
-    <div className="App">
-      <h1>LeftHanded Marketplace</h1>
-        <NavBar />
-        <Items />
-    </div>
-    </Router>
-  );
+
+class App extends Component {
+
+  state= {
+    carted: []
+  }
+
+  render(){
+    return (
+      <Router>
+      <div className="App">
+        <h1>LeftHanded Marketplace</h1>
+          <NavBar />
+          <ItemsContainer />
+      </div>
+      </Router>
+    );
+  }
 }
 
 

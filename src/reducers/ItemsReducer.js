@@ -1,4 +1,4 @@
-function itemsReducer(state = [], action) {
+function ItemsReducer(state = [], action) {
     switch (action.type) {
         case "GET_ITEMS":
             return action.payload
@@ -8,4 +8,4 @@ function itemsReducer(state = [], action) {
     }
 }
 
-export default itemsReducer;
+export default ItemsReducer;
