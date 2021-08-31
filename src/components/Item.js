@@ -1,6 +1,12 @@
 import React, {Component} from "react";
 
 class Item extends Component {
+
+    buttonClickHandler = () => {
+        this.props.addCart(this.props.item)
+        window.alert('Item has Been Added to Your Cart!')
+    }
+
     render() {
         const i = this.props.item
     return (
@@ -9,7 +15,10 @@ class Item extends Component {
             <p>{i.description}</p>
             <h3>${i.price}</h3>
         
-            <button onClick={() => this.props.addCart(i)}>Add to Cart</button>
+            <button onClick={this.buttonClickHandler}>Add to Cart</button>
+
+            <p>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
+            <a href="/reviews">Read All Reviews</a>
         </div>
     )
 }
