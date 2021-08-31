@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 
 function NavBar() {
@@ -15,6 +15,7 @@ function NavBar() {
                 <button><h4>&#x1F3E0; Home</h4></button>
             </Link>
         </div>
+
     )
 }
 

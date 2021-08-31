@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Item extends Component {
+class CartItem extends Component {
     render() {
         const i = this.props.item
     return (
@@ -8,11 +8,9 @@ class Item extends Component {
             <p><b>{i.name}</b></p>
             <p>{i.description}</p>
             <h3>${i.price}</h3>
-        
-            <button onClick={() => this.props.addCart(i)}>Add to Cart</button>
         </div>
     )
 }
 }
 
-export default Item;
+export default CartItem;
