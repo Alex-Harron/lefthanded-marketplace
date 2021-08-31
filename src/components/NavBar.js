@@ -14,7 +14,6 @@ function NavBar() {
             <Link to="/cart">
                 <button><h4>&#x1F6D2; Your Cart</h4></button>
             </Link>
-
         </div>
 
     )

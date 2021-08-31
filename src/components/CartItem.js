@@ -1,6 +1,15 @@
 import React, {Component} from "react";
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+
 
 class CartItem extends Component {
+
+    
+    buttonClickHandler = () => {
+        this.props.deleteCart(this.props.item)
+        window.alert('Item has Been Deleted From Your Cart!')
+    }
+
 
     render() {
         const i = this.props.item
@@ -9,10 +18,13 @@ class CartItem extends Component {
             <p><b>{i.name}</b></p>
             <p>{i.description}</p>
             <p>${i.price}</p>
-            <button onClick={() => this.props.deleteCart(i)} >Remove From Cart</button>
+            <p>{i.id}</p>
+            <button onClick={this.buttonClickHandler} >Remove From Cart</button>
 
             <p>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
-            <a href="/reviews">Read All Reviews</a>
+            <Link to={i.id + '/reviews'}>
+                <button>See All Reviews</button>
+            </Link>
         </div>
         )
     }

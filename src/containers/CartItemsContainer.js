@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import CartItem from '../components/CartItem';
+
+
 import { deleteCart } from '../actions/CartActions';
-class CartItems extends Component {
+class CartItemsContainer extends Component {
     render() {
         const items = this.props.carted.map( item => <CartItem item={item} key={item.id} deleteCart={this.props.deleteCart}/>)
         return (
@@ -26,4 +28,4 @@ const MDTP = (dispatch) => {
     }
 }
 
-export default connect(MSTP, MDTP)(CartItems)
+export default connect(MSTP, MDTP)(CartItemsContainer)

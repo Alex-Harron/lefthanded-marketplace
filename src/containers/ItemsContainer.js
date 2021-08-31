@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item from '../components/Item';
-import { addCart, deleteCart } from '../actions/CartActions';
+import { addCart } from '../actions/CartActions';
 import { connect } from 'react-redux';
 import { fetchItems } from '../actions/ItemActions.js'
 
@@ -34,7 +34,6 @@ const MDTP = (dispatch) => {
     return {
         dispatchFetchItems: () => dispatch(fetchItems()),
         addCart: (item) => dispatch(addCart(item)),
-        deleteCart: (item) => dispatch(deleteCart(item))
     }
 }
 

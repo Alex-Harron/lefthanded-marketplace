@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import './App.css';
 import NavBar from './components/NavBar'
 import ItemsContainer from './containers/ItemsContainer';
-import CartItems from './containers/CartItemsContainer';
+import CartItemsContainer from './containers/CartItemsContainer';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+import Item from './components/Item';
 
 
 class App extends Component {
@@ -21,8 +22,9 @@ class App extends Component {
           <NavBar />
         <Switch>
           <Route path='/products' component={(routerInfo) => <ItemsContainer routerInfo={routerInfo}/>} />
+          <Route path='/cart' component={(routerInfo) => <CartItemsContainer routerInfo={routerInfo}/>} />
+          <Route path={Item.id + '/cart'}  component={(routerInfo) => <CartItemsContainer routerInfo={routerInfo}/>} />
         </Switch>
-        <Route path='/cart' component={(routerInfo) => <CartItems routerInfo={routerInfo}/>} />
       </div>
       </Router>
     );
