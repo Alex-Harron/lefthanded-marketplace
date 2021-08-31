@@ -7,7 +7,8 @@ class CartItem extends Component {
         <div className='card'>
             <p><b>{i.name}</b></p>
             <p>{i.description}</p>
-            <h3>${i.price}</h3>
+            <p>${i.price}</p>
+            <button onClick={() => this.props.deleteCart(i)}>Remove From Cart</button>
         </div>
     )
 }

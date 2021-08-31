@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item from '../components/Item';
-import { addCart } from '../actions/CartActions';
+import { addCart, deleteCart } from '../actions/CartActions';
 import { connect } from 'react-redux';
 import { fetchItems } from '../actions/ItemActions.js'
 
@@ -12,7 +12,7 @@ class ItemsContainer extends Component {
     render() {
         const itemsJSX = this.props.items.map( i => {
             return (
-                <Item item={i} addCart={this.props.addCart} /> 
+                <Item item={i} key={i.id} addCart={this.props.addCart} /> 
             )
         })
         return (
@@ -33,7 +33,8 @@ const MSTP = (stateFromTheStore) => {
 const MDTP = (dispatch) => {
     return {
         dispatchFetchItems: () => dispatch(fetchItems()),
-        addCart: (item) => dispatch(addCart(item))
+        addCart: (item) => dispatch(addCart(item)),
+        deleteCart: (item) => dispatch(deleteCart(item))
     }
 }
 

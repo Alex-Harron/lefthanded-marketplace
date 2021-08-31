@@ -9,6 +9,12 @@ function CartItemsReducer(state= initialState, action) {
                 ...state, 
                 carted: [...state.carted, action.payload]
             }
+
+        case "DELETE_ITEM":
+            return {
+                ...state,
+                carted: state.carted.filter(i => i !== action.payload)
+            }
         default:
             return state
     }
