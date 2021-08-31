@@ -12,7 +12,7 @@ class ItemsContainer extends Component {
     render() {
         const itemsJSX = this.props.items.map( i => {
             return (
-                <Item {...i} key={i.id} addCart={this.props.addCart} /> 
+                <Item item={i} addCart={this.props.addCart} /> 
             )
         })
         return (

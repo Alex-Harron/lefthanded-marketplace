@@ -19,4 +19,4 @@ const MSTP = (state) => {
         carted: state.root_cart.carted
     }
 }
-export default connect()(CartItems)
+export default connect(MSTP)(CartItems)

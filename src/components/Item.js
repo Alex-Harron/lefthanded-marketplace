@@ -1,13 +1,18 @@
-import React from 'react'
+import React, {Component} from "react"
 
-export default function Item(props) {
-
+class Item extends Component {
+    render() {
+        const i = this.props.item
     return (
         <div className='card'>
-            <p><b>{props.name}</b></p>
-            <p>{props.description}</p>
-            <h3>${props.price}</h3>
-            <button onClick={() => props.addCart(props.name)}>Add to Cart</button>
+            <p><b>{i.name}</b></p>
+            <p>{i.description}</p>
+            <h3>${i.price}</h3>
+        
+            <button onClick={() => this.props.addCart(i)}>Add to Cart</button>
         </div>
     )
 }
+}
+
+export default Item;
