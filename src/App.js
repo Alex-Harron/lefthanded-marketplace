@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import './App.css';
 import NavBar from './components/NavBar'
-import { connect } from 'react-redux';
 import ItemsContainer from './containers/ItemsContainer';
-import CartItems from './containers/CartItems';
+import CartItems from './containers/CartItemsContainer';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,9 +12,6 @@ import {
 
 class App extends Component {
 
-  state= {
-    carted: []
-  }
 
   render(){
     return (
@@ -33,8 +29,6 @@ class App extends Component {
   }
 }
 
-const MSTP = (state) => {
-  return { carted: state.items}
-}
 
-export default connect(MSTP)(App);
+
+export default (App);
