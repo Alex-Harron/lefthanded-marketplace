@@ -11,9 +11,6 @@ function NavBar() {
             <Link to="/products">
                 <button><h4>&#x1F3C4; All Products</h4></button>
             </Link>
-            <Link to="/categories">
-                <button><h4> Categories</h4></button>
-            </Link>
             <Link to="/cart">
                 <button><h4>&#x1F6D2; Your Cart</h4></button>
             </Link>
