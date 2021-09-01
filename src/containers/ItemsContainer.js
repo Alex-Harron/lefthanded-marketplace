@@ -4,7 +4,7 @@ import { addCart } from '../actions/CartActions';
 import { connect } from 'react-redux';
 import { fetchItems } from '../actions/ItemActions.js'
 import { fetchCategories } from '../actions/CategoryActions.js';
-
+import Category from '../components/Categoy';
 class ItemsContainer extends Component {
 
     componentDidMount(){
@@ -19,11 +19,17 @@ class ItemsContainer extends Component {
             )
         })
 
+        const categoriesJSX = this.props.categories.map( c => {
+            return (
+                <Category category={c} key={c.id}/>
+            )
+        } )
+
 
         return (
             <div>
             <h1>All Categories</h1>
-
+                {categoriesJSX}
                 <h1>All Items</h1>
                 {itemsJSX}
             </div>
