@@ -21,7 +21,7 @@ class Item extends Component {
 
             <p>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
             <Link to={i.id + '/reviews'}>
-                <a href>See All Reviews</a>
+                <a href='true'>See All Reviews</a>
             </Link>
         </div>
     )

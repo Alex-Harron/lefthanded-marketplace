@@ -5,6 +5,7 @@ import CartItem from '../components/CartItem';
 
 import { deleteCart } from '../actions/CartActions';
 class CartItemsContainer extends Component {
+    
     render() {
         const items = this.props.carted.map( item => <CartItem item={item} key={item.id} deleteCart={this.props.deleteCart}/>)
         return (
