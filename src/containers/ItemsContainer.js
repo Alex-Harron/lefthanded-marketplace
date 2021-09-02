@@ -4,11 +4,11 @@ import { addCart } from '../actions/CartActions';
 import { connect } from 'react-redux';
 import { fetchItems } from '../actions/ItemActions.js'
 import { fetchCategories } from '../actions/CategoryActions.js';
-import Category from '../components/Categoy';
+import Category from '../components/Category';
+import CategoryItems from '../components/CategoryItems';
 import {
     Switch,
-    Route,
-    Link
+    Route
     } from "react-router-dom";
 
 
@@ -31,13 +31,12 @@ class ItemsContainer extends Component {
 
         const categoriesJSX = this.props.categories.map( c => {
             return (
-                <div>
-                <Link to={`/categories/${c.id}`}>
-                    {c.name}
-                </Link>
+            <div>
+                <Category category={c} key={c.id}/>
             </div>
             )
         } )
+
 
 
         return (
@@ -52,10 +51,17 @@ class ItemsContainer extends Component {
                 <Route path="/categories/:id" component={(routeInfo) => {
 
                     const routeId = parseInt(routeInfo.match.params.id)
+                    const i = this.props.items.filter(i => i.category_id === routeId)
+                    const filteredJSX = i.map( i => {
+                        return (
+                            <Item item={i} key={i.id} addCart={this.props.addCart} /> 
+                        )
+                    })
+                    
                     const c = this.props.categories.find(c => c.id === routeId)
-                
+        
                     return (!!c ? 
-                        <Category  items={itemsJSX} category={c} key={c.id}/> 
+                        <CategoryItems route={routeId} item={filteredJSX} />
 
                         :
                         <h1 id="error"> Product Doesn't Exist!! </h1>)

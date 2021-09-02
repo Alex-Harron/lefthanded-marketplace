@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Link} from 'react-router-dom';
+
 
 class Item extends Component {
 
@@ -19,9 +19,7 @@ class Item extends Component {
             <button onClick={this.buttonClickHandler}>Add to Cart</button>
 
             <p>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
-            <Link to={i.id + '/reviews'}>
-                <a href='true'>See All Reviews</a>
-            </Link>
+
         </div>
     )
 }
