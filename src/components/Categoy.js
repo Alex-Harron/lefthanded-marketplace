@@ -1,18 +1,21 @@
 import React, {Component} from "react";
-import {Link} from 'react-router-dom';
 
 class Category extends Component {
 
+
     render() {
-        const c = this.props.category
+        const c = this.props.category;
+        const i = this.props.items;
+
     return (
         <div>
-            <Link to={c.id + '/categories'}>
-                <a href='true'>{c.name}</a>
-            </Link>
+            <h1>{c.name} Products</h1>
+            <h2>{i}</h2>
+            
         </div>
     )
 }
 }
 
 export default Category;
+

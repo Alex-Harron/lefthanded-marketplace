@@ -22,7 +22,8 @@ class App extends Component {
           <NavBar />
         <Switch>
           <Route exact path='/' />
-          <Route exact path='/products' component={(routerInfo) => <ItemsContainer routerInfo={routerInfo}/>} />
+          <Route path='/products' component={(routerInfo) => <ItemsContainer routerInfo={routerInfo}/>} />
+          <Route path='/categories' component={(routerInfo) => <ItemsContainer routerInfo={routerInfo}/>} />
           <Route exact path='/cart' component={(routerInfo) => <CartItemsContainer routerInfo={routerInfo}/>} />
           <Route path="*" render={() => <h1 id="error">PAGE DOES NOT EXIST!</h1>} />
         </Switch>
