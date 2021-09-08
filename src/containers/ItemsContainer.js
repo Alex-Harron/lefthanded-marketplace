@@ -40,22 +40,21 @@ class ItemsContainer extends Component {
 
 
         return (
-            <div id="items-container" className='padding'>
+        <div id="items-container" className='padding'>
             <Switch>
                 <Route exact path="/" >
                     <div className='sidenav' >
-                    <h2>Product Categories:</h2>
-                    <hr/>
-                    {categoriesJSX}
+                        <h2>Product Categories:</h2>
+                        <hr/>
+                        {categoriesJSX}
                     </div>
                     <div className='contentstyle'>
-                            <h1 className='content'>All Products:</h1>
-                            <hr/>
-                    {itemsJSX}
+                        <h1 className='content'>All Products:</h1>
+                        <hr/>
+                        {itemsJSX}
                     </div>
                 </Route>
                 <Route path="/categories/:id" component={(routeInfo) => {
-
                     const routeId = parseInt(routeInfo.match.params.id)
                     const i = this.props.items.filter(i => i.category_id === routeId)
                     const filteredJSX = i.map( i => {
@@ -65,16 +64,12 @@ class ItemsContainer extends Component {
                     })
                     
                     const c = this.props.categories.find(c => c.id === routeId)
-        
                     return (!!c ? 
                         <CategoryItems category={c} key={c.id} route={routeId} categories= {categoriesJSX} item={filteredJSX} />
-
                         :
                         <h1 id="error"> Product Doesn't Exist!! </h1>)
                     }} />
-
                 <Route path="*" render={() => <h1 id="error">404 Page Not Found</h1>}/>
-
             </Switch>
         </div>
         )

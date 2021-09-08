@@ -4,7 +4,7 @@
 
 
 .App-header {
-  background-color: #282c34;
+  background-color: #e9e9e9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -75,10 +75,8 @@ h2 {
 .sidenav {
   height: 40%;
   width: 20%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
-  top: 20;
-  left: 10;
   background-color: rgb(104, 104, 104);
 }
 
@@ -87,7 +85,7 @@ h2 {
   padding: 16px;
   text-decoration: none;
   display: block;
-  background-color: rgb(104, 104, 104);
+  background-color: rgb(143, 143, 143);
 
 }
 
@@ -106,7 +104,7 @@ h2 {
 
 body, html {
   height: 100%;
-  background-image: url("https://hougumlaw.com/wp-content/uploads/2016/05/light-website-backgrounds-light-color-background-images-light-color-background-images-for-website-1024x640.jpg");
+  background-image: url("https://i.pinimg.com/originals/1b/de/6e/1bde6e85c5e1665e0c4094c0cf0e2362.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -143,4 +141,31 @@ body, html {
   padding-right: 30px;
   padding-bottom: 20px;
   padding-left: 80px;
+}
+
+.header {
+  background-color: #c4c4c4;
+  text-align: center;
+  padding: 10px;
+  font-size: 35px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+  outline: #282c34;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
 }

@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
 
 class CategoryItems extends Component {
 
@@ -11,13 +10,13 @@ class CategoryItems extends Component {
 
     return (
         <div>
-        <div className='sidenav' >
-                    <h2>Product Categories:</h2>
-                    <hr/>
-                    {categoriesJSX}
-        </div>
+            <div className='sidenav' >
+                <h2>Product Categories:</h2>
+                <hr/>
+                {categoriesJSX}
+            </div>
         <div className='content'>
-        <h1> {c.name} Products:</h1>
+            <h1>{c.name} Products:</h1>
         </div>
             <p>{i}</p>
         </div>

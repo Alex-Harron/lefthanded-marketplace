@@ -11,7 +11,7 @@ class Category extends Component {
     return (
         <div>
             <Link to={`/categories/${c.id}`}>
-                    {c.name}
+                {c.name}
             </Link>
         </div>
     )
