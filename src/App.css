@@ -20,8 +20,7 @@
 
 
 .card {
-  border-radius: 25px;
-  background-color:rgb(105, 105, 105);
+    background-color:rgb(245, 245, 220);
   padding: 10px;
   display: inline-table;
   width: 400px;
@@ -32,7 +31,6 @@
 }
 
 .topnav {
-  border-radius: 25px;
   overflow: hidden;
   background-color: rgb(23, 160, 142);
 }
@@ -52,7 +50,6 @@
 }
 
 .content {
-  border-radius: 25px;
   background-color: rgb(168, 168, 168);
   margin: auto;
   width: 50%;
@@ -68,13 +65,12 @@ h2 {
   text-align: center;
 }
 
-img {
+.img {
   height: 50px;
   width: 60px;
 }
 
 .sidenav {
-  border-radius: 25px;
   height: 60%;
   width: 20%;
   position: fixed;
@@ -99,14 +95,13 @@ img {
 }
 
 .contentstyle {
-  border-radius: 25px;
   margin-left: 200px;
   padding-left: 20px;
 }
 
 body, html {
   height: 100%;
-  background-image: url("https://marketinados.com/wp-content/uploads/2018/03/background-tech-background.png");
+  background-image: url("https://hougumlaw.com/wp-content/uploads/2016/05/light-website-backgrounds-light-color-background-images-light-color-background-images-for-website-1024x640.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -122,4 +117,12 @@ body, html {
   color: white;
   text-align: left;
 }
+
+.img2 {
+  display: block;
+  margin-left: 10;
+  margin-right: auto;
+  width: 10%;
+}
+
 

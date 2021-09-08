@@ -19,10 +19,10 @@ class App extends Component {
       <Router>
       <div className="App">
         <div >
+        <img src='https://www.dhpstudios.com/wp-content/uploads/2018/03/Southpaw-Logo-2017-Black-RGB.png' alt='hi' className='img2'/>
           <NavBar />
         <Switch>
-          <Route exact path='/' />
-          <Route path='/products' component={(routerInfo) => <ItemsContainer routerInfo={routerInfo}/>} />
+          <Route exact path='/' component={(routerInfo) => <ItemsContainer routerInfo={routerInfo}/>} />
           <Route path='/categories' component={(routerInfo) => <ItemsContainer routerInfo={routerInfo}/>} />
           <Route exact path='/cart' component={(routerInfo) => <CartItemsContainer routerInfo={routerInfo}/>} />
           <Route path="*" render={() => <h1 id="error">PAGE DOES NOT EXIST!</h1>} />

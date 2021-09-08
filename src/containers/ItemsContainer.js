@@ -42,7 +42,7 @@ class ItemsContainer extends Component {
         return (
             <div id="items-container">
             <Switch>
-                <Route exact path="/products" >
+                <Route exact path="/" >
                     <div className='sidenav' >
                     <h1>Categories:</h1>
                     {categoriesJSX}
