@@ -40,17 +40,17 @@ class ItemsContainer extends Component {
 
 
         return (
-            <div id="items-container">
+            <div id="items-container" className='padding'>
             <Switch>
                 <Route exact path="/" >
                     <div className='sidenav' >
-                    <h1>Categories:</h1>
+                    <h2>Product Categories:</h2>
+                    <hr/>
                     {categoriesJSX}
                     </div>
                     <div className='contentstyle'>
-                        <div className="content">
-                            <h1>All Products</h1>
-                        </div>
+                            <h1 className='content'>All Products:</h1>
+                            <hr/>
                     {itemsJSX}
                     </div>
                 </Route>
@@ -67,7 +67,7 @@ class ItemsContainer extends Component {
                     const c = this.props.categories.find(c => c.id === routeId)
         
                     return (!!c ? 
-                        <CategoryItems category={c} key={c.id} route={routeId} item={filteredJSX} />
+                        <CategoryItems category={c} key={c.id} route={routeId} categories= {categoriesJSX} item={filteredJSX} />
 
                         :
                         <h1 id="error"> Product Doesn't Exist!! </h1>)

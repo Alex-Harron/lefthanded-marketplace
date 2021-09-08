@@ -19,8 +19,8 @@
 }
 
 
-.card {
-    background-color:rgb(245, 245, 220);
+.col-container {
+  width: 100%; 
   padding: 10px;
   display: inline-table;
   width: 400px;
@@ -28,11 +28,14 @@
   margin: 10px;
   background-position-y: bottom;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
+
+
 
 .topnav {
   overflow: hidden;
-  background-color: rgb(23, 160, 142);
+  background-color: rgb(23, 133, 160);
 }
 
 .topnav a {
@@ -50,7 +53,7 @@
 }
 
 .content {
-  background-color: rgb(168, 168, 168);
+  background-color: rgb(23, 133, 160);
   margin: auto;
   width: 50%;
   padding: 10px;
@@ -66,19 +69,17 @@ h2 {
 }
 
 .img {
-  height: 50px;
-  width: 60px;
+  width: 5%;
 }
 
 .sidenav {
-  height: 60%;
+  height: 40%;
   width: 20%;
   position: fixed;
   z-index: 1;
-  top: 10;
-  left: 0;
-  background-color: rgb(148, 29, 29);
-  overflow-x: hidden;
+  top: 20;
+  left: 10;
+  background-color: rgb(104, 104, 104);
 }
 
 .sidenav a {
@@ -86,6 +87,8 @@ h2 {
   padding: 16px;
   text-decoration: none;
   display: block;
+  background-color: rgb(104, 104, 104);
+
 }
 
 
@@ -95,8 +98,10 @@ h2 {
 }
 
 .contentstyle {
-  margin-left: 200px;
-  padding-left: 20px;
+  background-color: rgb(228, 227, 227);
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 body, html {
@@ -105,6 +110,7 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 
@@ -125,4 +131,16 @@ body, html {
   width: 10%;
 }
 
+.itemimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
 
+.padding {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+}

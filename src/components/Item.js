@@ -11,16 +11,19 @@ class Item extends Component {
     render() {
         const i = this.props.item
     return (
-        <div className='card'>
+        <div className='col-container'>
+            <div className='col'>
+            <img src={i.img_id} alt={i.name} className='itemimage'/>
             <p><b>{i.name}</b></p>
             <p>{i.description}</p>
-            <p>${i.price}</p>
+            <b><p>${i.price}</p></b>
         
             <button onClick={this.buttonClickHandler}>Add to Cart</button>
 
             <p>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
-
-        </div>
+            <hr/>
+            </div>
+            </div>
     )
 }
 }
