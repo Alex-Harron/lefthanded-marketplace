@@ -5,15 +5,18 @@ import CartItem from '../components/CartItem';
 
 import { deleteCart } from '../actions/CartActions';
 class CartItemsContainer extends Component {
+
     
     render() {
         const items = this.props.carted.map( item => <CartItem item={item} key={item.id} deleteCart={this.props.deleteCart}/>)
+
         return (
-        <div className='bg'>
-            <div id="cart-container" class='content'>
-                <h1>Cart Items</h1>
-            </div>
+        <div>
+            <div id="cart-container" class='contentstyle'>
+                <h1>Your Cart</h1>
             <p>{items}</p>
+            <button className='content'><b>Checkout</b></button>
+            </div>
         </div>
         )
     }

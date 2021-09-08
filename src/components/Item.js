@@ -13,13 +13,13 @@ class Item extends Component {
     return (
         <div className='col-container'>
             <div className='col'>
+                <hr/>
+                <br/>
                 <img src={i.img_id} alt={i.name} className='itemimage'/>
                 <p><b>{i.name}</b></p>
                 <p>{i.description}</p>
                 <b><p>${i.price}</p></b>
                 <button onClick={this.buttonClickHandler}>Add to Cart</button>
-                <p>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
-                <hr/>
             </div>
         </div>
     )

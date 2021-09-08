@@ -77,15 +77,15 @@ h2 {
   width: 20%;
   position: absolute;
   z-index: 1;
-  background-color: rgb(104, 104, 104);
+  background-color: rgb(207, 207, 207);
 }
 
 .sidenav a {
-  color: white;
+  color: black;
   padding: 16px;
   text-decoration: none;
   display: block;
-  background-color: rgb(143, 143, 143);
+  background-color: rgb(207, 207, 207);
 
 }
 
@@ -111,16 +111,6 @@ body, html {
   background-attachment: fixed;
 }
 
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: left;
-}
 
 .img2 {
   display: block;

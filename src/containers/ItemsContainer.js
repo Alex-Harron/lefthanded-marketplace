@@ -49,7 +49,7 @@ class ItemsContainer extends Component {
                         {categoriesJSX}
                     </div>
                     <div className='contentstyle'>
-                        <h1 className='content'>All Products:</h1>
+                        <h1>All Products:</h1>
                         <hr/>
                         {itemsJSX}
                     </div>

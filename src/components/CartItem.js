@@ -16,13 +16,13 @@ class CartItem extends Component {
     return (
         <div className='col-container'>
             <div className='col'>
+            <hr/>
+            <br/>
                 <img src={i.img_id} alt={i.name} className='itemimage'/>
                 <p><b>{i.name}</b></p>
                 <p>{i.description}</p>
-                <p>${i.price}</p>
+                <p><b>${i.price}</b></p>
                 <button onClick={this.buttonClickHandler} >Remove From Cart</button>
-                <p>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
-                <hr/>
             </div>
         </div>
         )

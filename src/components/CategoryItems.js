@@ -18,7 +18,7 @@ class CategoryItems extends Component {
         <div className='content'>
             <h1>{c.name} Products:</h1>
         </div>
-            <p>{i}</p>
+            <p className='contentstyle'>{i}</p>
         </div>
     )
 }
