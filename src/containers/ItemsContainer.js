@@ -40,13 +40,19 @@ class ItemsContainer extends Component {
 
 
         return (
-            <div id="recipe-container">
+            <div id="items-container">
             <Switch>
-                <Route exact path="/products">
-                    <h1>All Categories</h1>
+                <Route exact path="/products" >
+                    <div className='sidenav' >
+                    <h1>Categories:</h1>
                     {categoriesJSX}
-                    <h1>All Products</h1>
+                    </div>
+                    <div className='contentstyle'>
+                        <div className="content">
+                            <h1>All Products</h1>
+                        </div>
                     {itemsJSX}
+                    </div>
                 </Route>
                 <Route path="/categories/:id" component={(routeInfo) => {
 
@@ -61,13 +67,13 @@ class ItemsContainer extends Component {
                     const c = this.props.categories.find(c => c.id === routeId)
         
                     return (!!c ? 
-                        <CategoryItems route={routeId} item={filteredJSX} />
+                        <CategoryItems category={c} key={c.id} route={routeId} item={filteredJSX} />
 
                         :
                         <h1 id="error"> Product Doesn't Exist!! </h1>)
                     }} />
 
-                <Route path="*" render={() => <h1 id="error">CONTAINER ERROR!!!</h1>}/>
+                <Route path="*" render={() => <h1 id="error">404 Page Not Found</h1>}/>
 
             </Switch>
         </div>

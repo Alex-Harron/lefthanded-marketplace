@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-        <h1>LeftHanded Marketplace</h1>
+        <div >
           <NavBar />
         <Switch>
           <Route exact path='/' />
@@ -27,6 +27,7 @@ class App extends Component {
           <Route exact path='/cart' component={(routerInfo) => <CartItemsContainer routerInfo={routerInfo}/>} />
           <Route path="*" render={() => <h1 id="error">PAGE DOES NOT EXIST!</h1>} />
         </Switch>
+        </div>
       </div>
       </Router>
     );
