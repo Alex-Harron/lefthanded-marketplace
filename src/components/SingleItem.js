@@ -1,9 +1,10 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
 
 
 
-class Item extends Component {
+class SingleItem extends Component {
+
+
 
 
     buttonClickHandler = () => {
@@ -13,22 +14,25 @@ class Item extends Component {
 
     render() {
         const i = this.props.item
+        const r = this.props.reviews
     return (
         <div className='contentstyle'>
-            <div className='col'>
+            <div>
                 <hr/>
                 <br/>
                 <img src={i.img_id} alt={i.name} className='itemimage'/>
                 <b>{i.name}</b>
                 <p>{i.description}</p>
                 <b><p>${i.price}</p></b>
-                <Link to={`/products/${i.id}`}>
-                <button>View Product</button>
-                </Link>
+                <button onClick={this.buttonClickHandler}>Add to Cart</button>
+                <hr/>
+                <h2>Reviews</h2>
+                <p>{r}</p>
+
             </div>
         </div>
     )
-}
+    }
 }
 
-export default Item;
+export default SingleItem;

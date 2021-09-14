@@ -15,7 +15,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #000000;
 }
 
 
@@ -35,7 +35,7 @@
 
 .topnav {
   overflow: hidden;
-  background-color: rgb(23, 133, 160);
+  background-color: rgb(90, 146, 160);
 }
 
 .topnav a {
@@ -101,7 +101,7 @@ h2 {
 
 
 .sidenav a:hover {
-  background-color: #ddd;
+  background-color: rgb(90, 146, 160);
   color: rgb(0, 0, 0);
 }
 
@@ -133,7 +133,7 @@ body, html {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 40%;
 }
 
 .padding {
