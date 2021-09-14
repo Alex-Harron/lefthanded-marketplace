@@ -31,9 +31,7 @@ class ItemsContainer extends Component {
 
         const categoriesJSX = this.props.categories.map( c => {
             return (
-            <div>
                 <Category category={c} key={c.id}/>
-            </div>
             )
         } )
 
@@ -43,14 +41,15 @@ class ItemsContainer extends Component {
         <div id="items-container" className='padding'>
             <Switch>
                 <Route exact path="/" >
-                    <div className='sidenav' >
+                    <div id='product-categories' className='sidenav' >
                         <h2>Product Categories:</h2>
                         <hr/>
                         {categoriesJSX}
                     </div>
-                    <div className='contentstyle'>
+                    <div id='all-products' className='content'>
                         <h1>All Products:</h1>
-                        <hr/>
+                    </div>
+                    <div id='items-list' className='contentstyle'>
                         {itemsJSX}
                     </div>
                 </Route>
@@ -62,10 +61,9 @@ class ItemsContainer extends Component {
                             <Item item={i} key={i.id} addCart={this.props.addCart} /> 
                         )
                     })
-                    
                     const c = this.props.categories.find(c => c.id === routeId)
                     return (!!c ? 
-                        <CategoryItems category={c} key={c.id} route={routeId} categories= {categoriesJSX} item={filteredJSX} />
+                        <CategoryItems category={c} key={c.id} categories={categoriesJSX} item={filteredJSX} />
                         :
                         <h1 id="error"> Product Doesn't Exist!! </h1>)
                     }} />

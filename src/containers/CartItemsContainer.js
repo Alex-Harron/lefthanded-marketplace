@@ -12,9 +12,9 @@ class CartItemsContainer extends Component {
 
         return (
         <div>
-            <div id="cart-container" class='contentstyle'>
+            <div id="cart-container" className='contentstyle'>
                 <h1>Your Cart</h1>
-            <p>{items}</p>
+            <ul>{items}</ul>
             <button className='content'><b>Checkout</b></button>
             </div>
         </div>

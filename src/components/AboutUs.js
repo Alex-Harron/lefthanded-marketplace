@@ -3,7 +3,7 @@ import React from 'react';
 function AboutUs() {
     return (
         <div className='padding'>
-            <div class="sidenav" >
+            <div className="sidenav" >
                 <div><img src='https://www.dhpstudios.com/wp-content/uploads/2018/03/Southpaw-Logo-2017-Black-RGB.png' alt='lefthand' className='itemimage'></img></div>
                 <hr />
                 <p>Aliquam etiam erat velit scelerisque in dictum. Euismod elementum nisi quis eleifend. Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. Commodo elit at imperdiet dui accumsan sit amet nulla.</p>
