@@ -20,10 +20,10 @@ class App extends Component {
         <div >
           <NavBar />
         <Switch>
-          <Route exact path='/' component={(routerInfo) => <ItemsContainer routerInfo={routerInfo}/>} />
+          <Route exact path='/' component={(routerInfo) => <AboutUs routerInfo={routerInfo}/>} /> 
+          <Route path='/products' component={(routerInfo) => <ItemsContainer routerInfo={routerInfo}/>} />
           <Route path='/categories' component={(routerInfo) => <ItemsContainer routerInfo={routerInfo}/>} />
           <Route exact path='/cart' component={(routerInfo) => <CartItemsContainer routerInfo={routerInfo}/>} />
-          <Route path='/about-us' component={(routerInfo) => <AboutUs routerInfo={routerInfo}/>} />
           <Route path="*" render={() => <h1 id="error">PAGE DOES NOT EXIST!</h1>} />
         </Switch>
         </div>

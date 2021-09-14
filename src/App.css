@@ -45,11 +45,21 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  position: relative;
 }
 
 .topnav a:hover {
   background-color: #ddd;
   color: black;
+}
+
+.topnav .badge {
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  padding: 5px 10px;
+  background: red;
+  color: white;
 }
 
 .content {
@@ -159,3 +169,7 @@ body, html {
   padding: 10px;
   text-align: center;
 }
+
+
+
+

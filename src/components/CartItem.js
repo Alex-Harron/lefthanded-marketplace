@@ -22,7 +22,7 @@ class CartItem extends Component {
                 <p><b>{i.name}</b></p>
                 <p>{i.description}</p>
                 <p><b>${i.price}</b></p>
-                <button onClick={this.buttonClickHandler} >Remove From Cart</button>
+                <button onClick={this.buttonClickHandler}>Remove From Cart</button>
             </div>
         </div>
         )
@@ -30,3 +30,4 @@ class CartItem extends Component {
 }
 
 export default CartItem;
+

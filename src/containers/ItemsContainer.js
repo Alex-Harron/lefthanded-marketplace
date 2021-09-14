@@ -40,7 +40,7 @@ class ItemsContainer extends Component {
         return (
         <div id="items-container" className='padding'>
             <Switch>
-                <Route exact path="/" >
+                <Route path="/products" >
                     <div id='product-categories' className='sidenav' >
                         <h2>Product Categories:</h2>
                         <hr/>

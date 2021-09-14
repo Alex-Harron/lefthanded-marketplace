@@ -14,7 +14,7 @@ class CartItemsContainer extends Component {
         <div>
             <div id="cart-container" className='contentstyle'>
                 <h1>Your Cart</h1>
-            <ul>{items}</ul>
+            <p>{items}</p>
             <button className='content'><b>Checkout</b></button>
             </div>
         </div>
