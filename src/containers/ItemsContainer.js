@@ -37,7 +37,7 @@ class ItemsContainer extends Component {
             return (
                 <Category category={c} key={c.id}/>
             )
-        } )
+        })
 
 
         return (
@@ -61,7 +61,7 @@ class ItemsContainer extends Component {
                     const i = this.props.items.filter(i => i.category_id === routeId)
                     const filteredJSX = i.map( i => {
                         return (
-                            <Item item={i} key={i.id}/> 
+                            <Item item={i} key={i.id} reviews={this.props.reviews}/> 
                         )
                     })
                     const c = this.props.categories.find(c => c.id === routeId)
