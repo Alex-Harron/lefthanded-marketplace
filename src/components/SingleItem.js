@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import ReviewForm from "./ReviewForm";
 
 
 
@@ -16,8 +17,10 @@ class SingleItem extends Component {
         const i = this.props.item
         const r = this.props.reviews
     return (
+        <div>
+                <div className="sidenav"><h2>Reviews ({r.length})</h2>
+                {r}</div>
         <div className='contentstyle'>
-            <div>
                 <h1><b>{i.name}</b></h1>
                 <hr/>
                 <br/>
@@ -25,10 +28,9 @@ class SingleItem extends Component {
                 <p>{i.description}</p>
                 <b><p>${i.price}</p></b>
                 <button onClick={this.buttonClickHandler}>Add to Cart</button>
-                <hr/>
-                <h2 className="content">Reviews ({r.length})</h2>
-                <p>{r}</p>
-            </div>
+                <p>Write A Review For This Product:</p>
+                <ReviewForm route={this.props.route}/>
+        </div>
         </div>
     )
     }

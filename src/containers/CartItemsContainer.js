@@ -12,12 +12,11 @@ class CartItemsContainer extends Component {
         const items = this.props.carted.map( item => <CartItem item={item} key={item.id} deleteCart={this.props.deleteCart}/>)
         return (
         <div>
-            <div id="cart-container" className='contentstyle'>
-                <h1>Your Cart</h1>
-            <p>{items}</p>
-            <p></p>
-            <button className='content'><b>Checkout</b></button>
+            <div id="cart-container" className='content'>
+                <h1>Your Cart ({items.length})</h1>
             </div>
+            <p className='contentstyle'>{items}</p>
+            <p></p>
         </div>
         )
     }

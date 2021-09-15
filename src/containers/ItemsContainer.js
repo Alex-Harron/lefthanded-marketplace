@@ -80,7 +80,7 @@ class ItemsContainer extends Component {
                     })
                     const p = this.props.items.find(p => p.id === routeId)
                     return (!!p ?
-                        <SingleItem item={p} key={p.id} addCart={this.props.addCart} reviews={filterReviews}/> 
+                        <SingleItem item={p} key={p.id} route={routeId} addCart={this.props.addCart} reviews={filterReviews}/> 
                         :
                         <h1 id="error"> Product Doesn't Exist!! </h1>)
                 }} />
