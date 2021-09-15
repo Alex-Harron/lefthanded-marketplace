@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { addReview } from '../actions/ReviewActions';
+import { connect } from 'react-redux';
 
 
 class ReviewForm extends Component {
@@ -16,13 +18,7 @@ class ReviewForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        fetch('http://127.0.0.1:3000/reviews', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(this.state)
-        })
+        this.props.addReview(this.state)
         this.setState({
             text: '',
             star_rating: ''
@@ -54,4 +50,4 @@ class ReviewForm extends Component {
     }
 }
 
-export default (ReviewForm);
+export default connect(null, {addReview})(ReviewForm);

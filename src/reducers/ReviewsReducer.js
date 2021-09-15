@@ -3,6 +3,9 @@ function ReviewsReducer(state = [], action) {
         case "GET_REVIEWS":
             return action.payload;
 
+        case "ADD_REVIEW":
+            return [...state, action.payload]
+
         default:
             return state;
     }
