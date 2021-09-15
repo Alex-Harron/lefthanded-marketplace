@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 class ReviewForm extends Component {
     state = {
         text: "",
-        star_rating: 0,
+        star_rating: '',
         item_id: this.props.route
     }
 
@@ -15,6 +15,7 @@ class ReviewForm extends Component {
     }
 
     handleSubmit = (e) => {
+        e.preventDefault()
         fetch('http://127.0.0.1:3000/reviews', {
             method: "POST",
             headers: {
@@ -22,7 +23,10 @@ class ReviewForm extends Component {
             },
             body: JSON.stringify(this.state)
         })
-
+        this.setState({
+            text: '',
+            star_rating: ''
+        });
     }
 
     render(){
@@ -39,6 +43,8 @@ class ReviewForm extends Component {
                 <input
                     name="star_rating"
                     type="number"
+                    min="0" 
+                    max="5"
                     value={this.state.star_rating}
                     onChange={this.handleChange}
                 /><br/>
