@@ -27,7 +27,7 @@ The information for this web application comes from here: URL. Ensure that you h
 <h2>Installing</h2>
 Clone the code of this repo. In your terminal:
 
-git clone "github-repo-code"
+### `git clone "github-repo-code"`
 
 ### `yarn install`
 
