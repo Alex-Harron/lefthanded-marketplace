@@ -22,7 +22,7 @@ Finally, the user can enter their cart and delete any item they do not want.
 ![ezgif com-gif-maker (11)](https://user-images.githubusercontent.com/74021683/134089116-b089a736-eba4-4677-8857-9b75664a776f.gif)
 
 <h2>Prerequisites</h2>
-The information for this web application comes from here: URL. Ensure that you have cloned this api respository before starting app.
+The information for this web application comes from here: https://github.com/Alex-Harron/lefthanded-marketplace-api. Ensure that you have cloned this api respository before starting app.
 
 <h2>Installing</h2>
 Clone the code of this repo. In your terminal:
