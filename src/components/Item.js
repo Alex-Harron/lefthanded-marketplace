@@ -5,12 +5,6 @@ import {Link} from "react-router-dom";
 
 class Item extends Component {
 
-
-    buttonClickHandler = () => {
-        this.props.addCart(this.props.item)
-        window.alert('Item has Been Added to Your Cart!')
-    }
-
     render() {
         const i = this.props.item
         const r = this.props.reviews.filter(r => r.item_id === i.id)

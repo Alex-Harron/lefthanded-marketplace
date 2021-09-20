@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import CartItem from '../components/CartItem';
-
-
 import { deleteCart } from '../actions/CartActions';
+
+
 class CartItemsContainer extends Component {
 
 

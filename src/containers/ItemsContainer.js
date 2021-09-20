@@ -27,11 +27,16 @@ class ItemsContainer extends Component {
 
 
     render() {
+
+
+
         const itemsJSX = this.props.items.map( i => {
             return (
                 <Item item={i} key={i.id} reviews={this.props.reviews} addCart={this.props.addCart} /> 
             )
         })
+
+
 
         const categoriesJSX = this.props.categories.map( c => {
             return (
@@ -50,6 +55,7 @@ class ItemsContainer extends Component {
                         {categoriesJSX}
                     </div>
                     <div id='all-products' className='content'>
+
                         <h1>All Products:</h1>
                     </div>
                     <div id='items-list' className='contentstyle'>

@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 class ReviewForm extends Component {
     state = {
         text: "",
-        star_rating: '',
+        star_rating: "",
         item_id: this.props.route
     }
 

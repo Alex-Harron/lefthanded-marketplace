@@ -5,9 +5,6 @@ import ReviewForm from "./ReviewForm";
 
 class SingleItem extends Component {
 
-
-
-
     buttonClickHandler = () => {
         this.props.addCart(this.props.item)
         window.alert('Item has Been Added to Your Cart!')
