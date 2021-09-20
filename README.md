@@ -29,7 +29,9 @@ Clone the code of this repo. In your terminal:
 
 git clone "github-repo-code"
 
+### `yarn install`
 
+Installs the package this application uses.
 
 ### `yarn start`
 
