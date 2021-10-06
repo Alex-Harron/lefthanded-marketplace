@@ -11,7 +11,7 @@ export const fetchReviews = () => {
 
 export const addReview = (text, star_rating) => {
 return (dispatch) => {
-fetch('https://infinite-woodland-28641.herokuapp.com', {
+fetch('https://infinite-woodland-28641.herokuapp.com/reviews', {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
