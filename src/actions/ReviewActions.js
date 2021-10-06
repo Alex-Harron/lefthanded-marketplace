@@ -1,6 +1,6 @@
 export const fetchReviews = () => {
     return (dispatch) => {
-        fetch("http://127.0.0.1:3000/reviews")
+        fetch("https://infinite-woodland-28641.herokuapp.com")
         .then(res => res.json())
         .then(reviews => dispatch({
             type: "GET_REVIEWS",
@@ -11,7 +11,7 @@ export const fetchReviews = () => {
 
 export const addReview = (text, star_rating) => {
 return (dispatch) => {
-fetch('http://127.0.0.1:3000/reviews', {
+fetch('https://infinite-woodland-28641.herokuapp.com', {
     method: "POST",
     headers: {
         "Content-Type": "application/json",

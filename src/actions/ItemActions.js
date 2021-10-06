@@ -1,6 +1,6 @@
 export const fetchItems = () => {
     return (dispatch) => {
-        fetch("http://127.0.0.1:3000/items")
+        fetch("https://infinite-woodland-28641.herokuapp.com")
         .then(res => res.json())
         .then(items => dispatch({
             type: "GET_ITEMS",
