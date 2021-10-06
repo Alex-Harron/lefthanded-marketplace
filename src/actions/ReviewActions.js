@@ -1,6 +1,6 @@
 export const fetchReviews = () => {
     return (dispatch) => {
-        fetch("https://infinite-woodland-28641.herokuapp.com")
+        fetch("https://infinite-woodland-28641.herokuapp.com/reviews")
         .then(res => res.json())
         .then(reviews => dispatch({
             type: "GET_REVIEWS",
