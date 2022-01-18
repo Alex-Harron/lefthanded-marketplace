@@ -6,7 +6,11 @@ class Category extends Component {
 
     render() {
         const c = this.props.category;
-        const uniqueCategories = Array.from(new Set(c.name));
+        let uniqueCategories;
+        if (c.id < 31) {
+            uniqueCategories = c.name
+        }
+
 
     return (
         <div>
