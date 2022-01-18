@@ -6,12 +6,12 @@ class Category extends Component {
 
     render() {
         const c = this.props.category;
-        const uniqueCategories = Array.from(new Set(c));
+        const uniqueCategories = Array.from(new Set(c.name));
 
     return (
         <div>
             <Link to={`/categories/${c.id}`}>
-                {c.name}
+                {uniqueCategories}
             </Link>
         </div>
     )
