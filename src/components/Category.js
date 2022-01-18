@@ -6,7 +6,7 @@ class Category extends Component {
 
     render() {
         const c = this.props.category;
-
+        const uniqueCategories = Array.from(new Set(c));
 
     return (
         <div>
